@@ -1,0 +1,21 @@
+<html><body>
+
+<img onclick="eatDonut()" id="myDonut" src="graphics/donut1.svg" width="200">
+
+
+<script type="text/javascript">
+
+donutArray= new Array('graphics/donut1.svg', 'graphics/donut2.svg', 'graphics/donut3.svg', 'graphics/donut4.svg', 'graphics/donut5.svg', 'graphics/donut6.svg', 'graphics/donut7.svg', 'graphics/donut8.svg', 'graphics/donutdone.svg');
+
+i = 0;
+function eatDonut()
+{
+    i++;
+    document.getElementById("myDonut").src=donutArray[i];
+    if(i==donutArray.length-1) {
+    	i = -1;
+    }
+}</script>
+
+
+</body></html>
