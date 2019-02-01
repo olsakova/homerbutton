@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  /* overflow: hidden; */
+}
+
+
+.beerGlass {
+    width: 100px;
+    height: auto;
+    position: absolute;
+
+    top: 400px;
+    left: 200px;
+
+}
+
+.beerGlass-active {
+  animation-name: beerMove;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+
+}
+
+@keyframes beerMove { 
+    from { transform: translateX(0); }
+    to   { transform: translateX(400px); }
+}
+@keyframes beerMove { 
+    0%   { transform: translateX(0); }
+    40% { transform: translateX(420px); }
+    60% { transform: translateX(420px); }
+    100% { transform: translateX(0); }
+}
+
+.container {
+    position: absolute;
+    width: 100%;
+    height: 300px;
+}
+
+/* resize images */
+.background {
+    position: absolute;
+    width: 1000px;
+}
