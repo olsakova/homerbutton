@@ -4,11 +4,19 @@ var beerGlass = document.querySelector('.beerGlass');
 var beerLiquid = document.querySelector('#liquid');
 var clickCount = 0;
 
+beerLiquid.onclick = function() {
+	 $('#liquid') // I Said Fill 'Er Up!
+    .animate({
+      height: '0px'
+    }, 2500);
+}
+
 beerGlass.onclick = function() {
   beerGlass.classList.remove('beerGlass-active');
   beerLiquid.classList.remove('beerGlass-active');
 
   clickCount = clickCount + 1;
+
   if (clickCount == 3) {
   	$(document).ready(function() {
   $('.pour') //Pour Me Another Drink, Bartender!
@@ -17,7 +25,7 @@ beerGlass.onclick = function() {
       height: '148px'
       }, 1500)
     .delay(1600)
-    .slideDown(500);
+    .slideUp(500);
   
   $('#liquid') // I Said Fill 'Er Up!
     .delay(3400)
@@ -32,14 +40,11 @@ beerGlass.onclick = function() {
       }, 2500);
   });
 
-
-
     beerGlass.classList.add('beerGlass-active');
     beerLiquid.classList.add('beerGlass-active');
     clickCount = 0;
   }
 }
-
 
 // var drawing3 = document.querySelector('#homer1');
 // drawing3.onload = function() {
