@@ -1,53 +1,81 @@
-var canvas = document.querySelector('.canvas');
-var width = canvas.width = window.innerWidth;
-var height = canvas.height = window.innerHeight;
 
-function animate({timing, draw, duration}) {
 
-  let start = performance.now();
+var beerGlass = document.querySelector('.beerGlass');
+var beerLiquid = document.querySelector('#liquid');
+var clickCount = 0;
 
-  requestAnimationFrame(function animate(time) {
-    // timeFraction goes from 0 to 1
-    let timeFraction = (time - start) / duration;
-    if (timeFraction > 1) timeFraction = 1;
+beerGlass.onclick = function() {
+  beerGlass.classList.remove('beerGlass-active');
+  beerLiquid.classList.remove('beerGlass-active');
 
-    // calculate the current animation state
-    let progress = timing(timeFraction);
-
-    draw(progress); // draw it
-
-    if (timeFraction < 1) {
-      requestAnimationFrame(animate);
-    }
-
+  clickCount = clickCount + 1;
+  if (clickCount == 3) {
+  	$(document).ready(function() {
+  $('.pour') //Pour Me Another Drink, Bartender!
+    .delay(2000)
+    .animate({
+      height: '148px'
+      }, 1500)
+    .delay(1600)
+    .slideDown(500);
+  
+  $('#liquid') // I Said Fill 'Er Up!
+    .delay(3400)
+    .animate({
+      height: '100px'
+    }, 2500);
+  
+  $('.beer-foam') // Keep that Foam Rollin' Toward the Top! Yahooo!
+    .delay(3400)
+    .animate({
+      bottom: '100px'
+      }, 2500);
   });
-}
 
-function drawImageScaled(img, ctx) {
-   var canvas = ctx.canvas ;
-   var hRatio = canvas.width  / img.width    ;
-   var vRatio =  canvas.height / img.height  ;
-   var ratio  = Math.min ( hRatio, vRatio );
-   var centerShift_x = ( canvas.width - img.width*ratio ) / 2;
-   var centerShift_y = ( canvas.height - img.height*ratio ) / 2;
-   // ctx.clearRect(0,0,canvas.width, canvas.height);
-   ctx.drawImage(img, 0,0, img.width, img.height,
-                      centerShift_x,centerShift_y,img.width*ratio, img.height*ratio);
+
+
+    beerGlass.classList.add('beerGlass-active');
+    beerLiquid.classList.add('beerGlass-active');
+    clickCount = 0;
+  }
 }
 
 
-var ctx = canvas.getContext('2d');
-// ctx.fillStyle = 'rgb(0, 0, 0)';
-// ctx.fillRect(0, 0, width, height);
+// var drawing3 = document.querySelector('#homer1');
+// drawing3.onload = function() {
+//    drawImageScaled(drawing3, ctx1, 0, 0, 1)
+// };
 
-// ctx.fillStyle = 'rgb(255, 0, 0)';
-// ctx.fillRect(50, 50, 100, 150);
+// var drawing2 = document.querySelector('#hand1');
+// drawing2.onload = function() {
+//
+//    drawImageScaled(drawing2, ctx2, 0, 0, 1)
+// };
 
-drawing = new Image();
-drawing.src = "./graphics/LivingRoomNoArm_TVOFF.png"; // can also be a remote URL e.g. http://
-drawing.onload = function() {
-   drawImageScaled(drawing, ctx)
-};
+
+// var canvas1 = document.querySelector('#layer-1');
+// var canvas2 = document.querySelector('#layer-2');
+// var canvas3 = document.querySelector('#layer-3');
+
+
+// canvas1.width = canvas2.width = canvas3.width = window.innerWidth;
+// canvas1.height = canvas2.height = canvas3.height = window.innerHeight;
+
+// var ctx1 = canvas1.getContext('2d');
+// var ctx2 = canvas2.getContext('2d');
+// var ctx3 = canvas3.getContext('2d');
+
+// function drawImageScaled(img, ctx, x, y, ratioM) {
+//   var canvas = ctx.canvas;
+//    var hRatio = canvas.width  / img.width    ;
+//    var vRatio =  canvas.height / img.height  ;
+//    var ratio  = Math.min ( hRatio, vRatio );
+//    var centerShift_x = ( canvas.width - img.width*ratio ) / 2;
+//    var centerShift_y = ( canvas.height - img.height*ratio ) / 2;
+//    // ctx.clearRect(0,0,canvas.width, canvas.height);
+//    ctx.drawImage(img, x,y, img.width, img.height,
+//                       centerShift_x,centerShift_y,img.width*ratio*ratioM, img.height*ratio*ratioM);
+// }
 
 
 

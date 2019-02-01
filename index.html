@@ -1,7 +1,35 @@
-<html><body>
+<html>
+<head>
+  <link rel="stylesheet" href="animations.css" type="text/css">
 
-<img onclick="eatDonut()" id="myDonut" src="graphics/donut1.svg" width="200">
+</head>
 
+<body>
+
+
+
+
+
+<div class="container">
+  <img class="background" src="./graphics/BarScene_withDispenser.png">
+  <img class="beerGlass" src="./graphics/beer.svg">
+  <img class="donut" onclick="eatDonut()" id="myDonut" src="graphics/donut1.svg">
+
+<div id="container">
+  <div class="pour"></div>
+  <div id="beaker">
+    <div id="liquid">
+      
+      <div class="bubble bubble1"></div>
+      <div class="bubble bubble2"></div>
+      <div class="bubble bubble3"></div>
+      <div class="bubble bubble4"></div>
+      <div class="bubble bubble5"></div>
+    </div>
+  </div>
+</div>
+
+</div>
 
 <script type="text/javascript">
 
@@ -15,7 +43,12 @@ function eatDonut()
     if(i==donutArray.length-1) {
     	i = -1;
     }
-}</script>
+}
+
+</script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script  src="script.js"></script>
 
 
-</body></html>
+</body>
+</html>
