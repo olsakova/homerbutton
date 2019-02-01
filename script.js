@@ -1,15 +1,41 @@
 
 
-
-
 var beerGlass = document.querySelector('.beerGlass');
+var beerLiquid = document.querySelector('#liquid');
 var clickCount = 0;
 
 beerGlass.onclick = function() {
   beerGlass.classList.remove('beerGlass-active');
+  beerLiquid.classList.remove('beerGlass-active');
+
   clickCount = clickCount + 1;
   if (clickCount == 3) {
+  	$(document).ready(function() {
+  $('.pour') //Pour Me Another Drink, Bartender!
+    .delay(2000)
+    .animate({
+      height: '148px'
+      }, 1500)
+    .delay(1600)
+    .slideDown(500);
+  
+  $('#liquid') // I Said Fill 'Er Up!
+    .delay(3400)
+    .animate({
+      height: '100px'
+    }, 2500);
+  
+  $('.beer-foam') // Keep that Foam Rollin' Toward the Top! Yahooo!
+    .delay(3400)
+    .animate({
+      bottom: '100px'
+      }, 2500);
+  });
+
+
+
     beerGlass.classList.add('beerGlass-active');
+    beerLiquid.classList.add('beerGlass-active');
     clickCount = 0;
   }
 }
