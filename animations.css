@@ -7,6 +7,10 @@ body {
   pointer-events: none;
 }
 
+.hidden {
+  display: none;
+}
+
 
 .beerGlass {
     width: 100px;
@@ -157,4 +161,10 @@ body {
 .background {
     position: absolute;
     width: 1000px;
+}
+
+
+#button {
+  position: absolute;
+  top: 600px;
 }
