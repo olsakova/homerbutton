@@ -40,7 +40,7 @@ beerGlass.onclick = function() {
     .delay(1000)
     .slideDown(500)
     .animate({
-      height: '148px'
+      height: '145px'
       }, 1500)
     .delay(1400)
     .slideUp(5);
