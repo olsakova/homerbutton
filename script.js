@@ -12,7 +12,6 @@ beerLiquid.onclick = function() {
 }
 
 beerGlass.onclick = function() {
-  console.log('x');
   beerGlass.classList.remove('beerGlass-active');
   beerLiquid.classList.remove('beerGlass-active');
 
@@ -44,10 +43,8 @@ beerGlass.onclick = function() {
 
     beerGlass.classList.add('beerGlass-active');
 
-    beerGlass.classList.add('noClick');
     beerLiquid.classList.add('beerGlass-active');
     clickCount = 0;
-    setTimeout(enableClick, 5100)
   }
 }
 
