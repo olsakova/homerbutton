@@ -41,18 +41,6 @@ body {
   border-radius: 10px;
 }
 
-
-.pour-active {
-  animation-name: pourMove;
-  animation-duration: 8s;
-  animation-timing-function: ease-in-out;
-  .animate({
-    height: '148px'
-    }, 1500)
-  .delay(1600)
-  .slideUp(500);
-}
-
 .liquid {
     position: absolute;
     background-color: #edaf32;
@@ -154,6 +142,7 @@ body {
     70% { transform: translateX(420px); }
     100% { transform: translateX(0); }
 }
+
 
 .container {
     position: absolute;
