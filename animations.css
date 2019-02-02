@@ -8,7 +8,6 @@ body {
     width: 100px;
     height: auto;
     position: absolute;
-
     top: 400px;
     left: 200px;
 
@@ -150,8 +149,17 @@ body {
     height: 300px;
 }
 
+.container-hidden {
+  display: none;
+  visibility: hidden;
+}
+
 /* resize images */
 .background {
     position: absolute;
     width: 1000px;
+}
+
+.noClick {
+   pointer-events: none;
 }

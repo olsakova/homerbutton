@@ -12,6 +12,7 @@ beerLiquid.onclick = function() {
 }
 
 beerGlass.onclick = function() {
+  console.log('x');
   beerGlass.classList.remove('beerGlass-active');
   beerLiquid.classList.remove('beerGlass-active');
 
@@ -26,13 +27,14 @@ beerGlass.onclick = function() {
       }, 1500)
     .delay(1600)
     .slideUp(500);
-  
+
   $('#liquid') // I Said Fill 'Er Up!
     .delay(3400)
     .animate({
       height: '100px'
     }, 2500);
-  
+
+
   $('.beer-foam') // Keep that Foam Rollin' Toward the Top! Yahooo!
     .delay(3400)
     .animate({
@@ -41,10 +43,14 @@ beerGlass.onclick = function() {
   });
 
     beerGlass.classList.add('beerGlass-active');
+
+    beerGlass.classList.add('noClick');
     beerLiquid.classList.add('beerGlass-active');
     clickCount = 0;
+    setTimeout(enableClick, 5100)
   }
 }
+
 
 // var drawing3 = document.querySelector('#homer1');
 // drawing3.onload = function() {

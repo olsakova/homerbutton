@@ -10,16 +10,20 @@
 
 
 
-<div class="container">
+<div id="scene2" class="container">
   <img class="background" src="./graphics/BarScene_withDispenser.png">
   <img class="beerGlass" src="./graphics/beer.svg">
+
+</div>
+
   <img class="donut" onclick="eatDonut()" id="myDonut" src="graphics/donut1.svg">
+
 
 <div id="container">
   <div class="pour"></div>
   <div id="beaker">
     <div id="liquid">
-      
+
       <div class="bubble bubble1"></div>
       <div class="bubble bubble2"></div>
       <div class="bubble bubble3"></div>
@@ -29,7 +33,12 @@
   </div>
 </div>
 
+<div id="scene1" class="container container-hidden">
+  <img class="background" src="./graphics/LivingRTV_gif.gif">
+  <img class="background" src="./graphics/Homer_donut.png">
 </div>
+
+<button type="button" id="toggleButton"> Toggle Scene</button>
 
 <script type="text/javascript">
 
