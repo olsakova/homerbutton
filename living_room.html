@@ -6,13 +6,25 @@
 
 <body>
 
+<audio id="eating" src="./Homer Voice Clips/Eating.wav" ></audio>
 
 <div class="container">
   <img class="background" src="./graphics/LivingRTV_gif.gif">
   <img class="foreground" src="./graphics/Homer_Sofa.png">
   
-  <img class="donutBox" onclick="removeDonut()" id="donutB" src="graphics/6box.svg">
+  <img class="donutBox" onclick="removeDonut(), play(eating)" id="donutB" src="graphics/6box.svg">
+  <img class="donutHand" src="./graphics/Hand1.svg">
+
+
 </div>
+
+<script>
+  function play(element){
+    var audio = document.getElementById(element);
+    audio.play();
+  }
+  </script>
+
 
 <script type="text/javascript">
   donutBoxArray = new Array('graphics/6box.svg', 'graphics/5box.svg', 'graphics/4box.svg', 'graphics/3box.svg', 'graphics/2box.svg', 'graphics/1box.svg', 'graphics/0box.svg');
@@ -28,6 +40,8 @@
 }
 
 </script>
+
+<script  src="living_room.js"></script>
 
 </body>
 </html>

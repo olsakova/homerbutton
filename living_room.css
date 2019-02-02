@@ -3,6 +3,14 @@ body {
   /* overflow: hidden; */
 }
 
+.noClick {
+  pointer-events: none;
+}
+
+.hidden {
+  display: none;
+}
+
 /* resize images */
 .background {
     position: absolute;
@@ -13,10 +21,49 @@ body {
     width: 1000px;
 }
 
-.donutbox {
+.donutBox {
   position: absolute;
   width: 210px;
   height: auto;
   top: 395px;
   left: 30px;
+}
+
+.donutHand {
+  position: absolute;
+  width: 100px;
+  height: auto;
+  top: 320px;
+  left: 630px;
+}
+
+.handLeave-active {
+  animation: forwards;
+  animation-name: handLeave;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes handLeave { 
+    from { transform: translateY(0); }
+    to { transform: translateX(-75px) translateY(250px)}
+}
+
+.handReturn-active {
+  animation: forwards;
+  animation-name: handReturn;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes handReturn { 
+    from { transform: translateY(0); }
+    to { transform: translateX(75px) translateY(100px)}
+}
+
+.container {
+    position: absolute;
+    width: 100%;
+    height: 563px;
+    overflow: hidden;
 }

@@ -24,7 +24,6 @@ body {
   animation-name: beerMove;
   animation-duration: 5s;
   animation-timing-function: ease-in-out;
-
 }
 
 /*
@@ -180,5 +179,4 @@ body {
 #button {
   position: absolute;
   top: 600px;
-
 }
