@@ -3,6 +3,14 @@
 var beerGlass = document.querySelector('.beerGlass');
 var beerLiquid = document.querySelector('#liquid');
 var clickCount = 0;
+var toggleButton = document.querySelector('#button');
+
+var scene1 = document.querySelector('.scene1');
+var scene2 = document.querySelector('.scene2');
+toggleButton.onclick = function() {
+  scene1.classList.toggle('hidden');
+  scene2.classList.toggle('hidden');
+}
 
 beerLiquid.onclick = function() {
 	if (beerGlass.classList.contains('full')){
