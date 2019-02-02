@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  /* overflow: hidden; */
+}
+
+/* resize images */
+.background {
+    position: absolute;
+    width: 1000px;
+}
+.foreground {
+    position: absolute;
+    width: 1000px;
+}
+
+.donutbox {
+  position: absolute;
+  width: 210px;
+  height: auto;
+  top: 395px;
+  left: 30px;
+}

@@ -1,0 +1,33 @@
+<html>
+<head>
+  <link rel="stylesheet" href="living_room.css" type="text/css">
+
+</head>
+
+<body>
+
+
+<div class="container">
+  <img class="background" src="./graphics/LivingRTV_gif.gif">
+  <img class="foreground" src="./graphics/Homer_Sofa.png">
+  
+  <img class="donutBox" onclick="removeDonut()" id="donutB" src="graphics/6box.svg">
+</div>
+
+<script type="text/javascript">
+  donutBoxArray = new Array('graphics/6box.svg', 'graphics/5box.svg', 'graphics/4box.svg', 'graphics/3box.svg', 'graphics/2box.svg', 'graphics/1box.svg', 'graphics/0box.svg');
+
+  i = 0;
+  function removeDonut()
+  {
+    i++;
+    document.getElementById("donutB").src=donutBoxArray[i];
+    if(i==donutBoxArray.length-1) {
+      i = -1;
+    }
+}
+
+</script>
+
+</body>
+</html>
