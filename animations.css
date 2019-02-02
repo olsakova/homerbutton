@@ -137,8 +137,8 @@ body {
 }
 @keyframes beerMove { 
     0%   { transform: translateX(0); }
-    40% { transform: translateX(420px); }
-    60% { transform: translateX(420px); }
+    30% { transform: translateX(420px); }
+    80% { transform: translateX(420px); }
     100% { transform: translateX(0); }
 }
 
