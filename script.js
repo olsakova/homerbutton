@@ -8,7 +8,7 @@ beerLiquid.onclick = function() {
 	if (beerGlass.classList.contains('full')){
 		beerGlass.classList.add('drinking');
 	    beerLiquid.classList.add('drinking');
-		
+
 		beerLiquid
 		 $('#liquid') // I Said Fill 'Er Up!
 	    .animate({
@@ -30,6 +30,10 @@ beerGlass.onclick = function() {
   if (clickCount == 3 && !beerGlass.classList.contains('drinking') && !beerGlass.classList.contains('beerGlass-active')) {
   	beerGlass.classList.add('beerGlass-active');
     beerLiquid.classList.add('beerGlass-active');
+    beerGlass.classList.add('noClick');
+    window.setTimeout(animationFinished, 5100);
+
+
   	$(document).ready(function() {
   $('.pour') //Pour Me Another Drink, Bartender!
   	// .reset()
@@ -52,3 +56,6 @@ beerGlass.onclick = function() {
   }
 }
 
+function animationFinished() {
+        beerGlass.classList.remove('noClick');
+}

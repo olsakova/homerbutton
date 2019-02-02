@@ -3,6 +3,10 @@ body {
   /* overflow: hidden; */
 }
 
+.noClick {
+  pointer-events: none;
+}
+
 
 .beerGlass {
     width: 100px;
@@ -154,4 +158,3 @@ body {
     position: absolute;
     width: 1000px;
 }
-
