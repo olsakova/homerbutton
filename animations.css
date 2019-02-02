@@ -135,6 +135,14 @@ body {
   left: 50px;
 }
 
+.moe {
+  position: absolute;
+  width: 850px;
+  height: 478px;
+  top: 65px;
+  left: 50px;
+}
+
 @keyframes beerMove { 
     from { transform: translateX(0); }
     to   { transform: translateX(400px); }
@@ -155,6 +163,10 @@ body {
 
 /* resize images */
 .background {
+    position: absolute;
+    width: 1000px;
+}
+.foreground {
     position: absolute;
     width: 1000px;
 }
