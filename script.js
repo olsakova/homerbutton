@@ -1,18 +1,63 @@
 
 
-
-
 var beerGlass = document.querySelector('.beerGlass');
+var beerLiquid = document.querySelector('#liquid');
 var clickCount = 0;
 
 beerGlass.onclick = function() {
+  console.log('x');
   beerGlass.classList.remove('beerGlass-active');
+  beerLiquid.classList.remove('beerGlass-active');
+
   clickCount = clickCount + 1;
   if (clickCount == 3) {
+  	$(document).ready(function() {
+  $('.pour') //Pour Me Another Drink, Bartender!
+    .delay(2000)
+    .animate({
+      height: '148px'
+      }, 1500)
+    .delay(1600)
+    .slideDown(500);
+
+  $('#liquid') // I Said Fill 'Er Up!
+    .delay(3400)
+    .animate({
+      height: '100px'
+    }, 2500);
+
+  $('.beer-foam') // Keep that Foam Rollin' Toward the Top! Yahooo!
+    .delay(3400)
+    .animate({
+      bottom: '100px'
+      }, 2500);
+  });
+
+
+
     beerGlass.classList.add('beerGlass-active');
+    beerGlass.classList.add('noClick');
+    beerLiquid.classList.add('beerGlass-active');
     clickCount = 0;
+    setTimeout(enableClick, 5100)
   }
 }
+
+
+function enableClick() {
+  beerGlass.classList.remove('noClick');
+}
+
+var scene1 = document.querySelector('#scene1');
+var scene2 = document.querySelector('#scene2');
+var toggleButton = document.querySelector('#toggleButton');
+
+toggleButton.onclick = function() {
+  scene1.classList.toggle('container-hidden');
+  scene2.classList.toggle('container-hidden');
+}
+
+
 
 
 // var drawing3 = document.querySelector('#homer1');

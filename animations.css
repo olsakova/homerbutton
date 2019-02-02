@@ -8,7 +8,6 @@ body {
     width: 100px;
     height: auto;
     position: absolute;
-
     top: 400px;
     left: 200px;
 
@@ -19,6 +18,118 @@ body {
   animation-duration: 5s;
   animation-timing-function: ease-in-out;
 
+}
+
+
+/*#container {
+  height: 370px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  top: -20px;
+  width: 248px;
+}
+
+#container div { position: absolute; }
+*/
+.pour {
+  position: absolute;
+  top: 365;
+  left: 663;
+  width: 10px;
+  height: 0px;
+  background-color: #edaf32;
+  border-radius: 10px
+}
+#liquid {
+    position: absolute;
+    background-color: #edaf32;
+    border: 2px solid #edaf32;
+    bottom: 0;
+    height: 0px;
+    overflow: hidden;
+    width: 71px;
+    left: 201;
+    bottom: -210;
+}
+
+
+#liquid:after {
+  background-color: rgba(255, 255, 255, 0.25);
+  bottom: -10px;
+  content: '';
+  height: 200px;
+  left: -40px;
+  position: absolute;
+  transform: rotate(30deg);
+  -webkit-transform: rotate(15deg);
+  width: 110px;
+}
+
+#liquid .bubble {
+  -webkit-animation-name: bubble;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  background-color: rgba(255, 255, 255, 0.2);
+  bottom: 0;
+  border-radius: 10px;
+  height: 20px;
+  width: 20px;
+}
+
+@-webkit-keyframes bubble {
+  0% { bottom: 0; }
+
+   50% {
+     background-color: rgba(255, 255, 255, 0.2);
+      bottom: 80px;
+   }
+
+   100% {
+     background-color: rgba(255, 255, 255, 0);
+      bottom: 160px;
+   }
+}
+
+.bubble1 {
+  left: 10px;
+  -webkit-animation-delay: 1000ms;
+  -webkit-animation-duration: 1000ms;
+}
+
+.bubble2 {
+  left: 50px;
+  -webkit-animation-delay: 700ms;
+  -webkit-animation-duration: 1100ms;
+}
+
+.bubble3 {
+  left: 100px;
+  -webkit-animation-delay: 1200ms;
+  -webkit-animation-duration: 1300ms;
+}
+
+.bubble4 {
+  left: 130px;
+  -webkit-animation-delay: 1100ms;
+  -webkit-animation-duration: 700ms;
+}
+
+.bubble5 {
+  left: 170px;
+  -webkit-animation-delay: 1300ms;
+  -webkit-animation-duration: 800ms;
+}
+
+
+
+
+.donut {
+  position: absolute;
+  width: 100px;
+  height: auto;
+  top: 400px;
+  left: 50px;
 }
 
 @keyframes beerMove { 
@@ -38,8 +149,17 @@ body {
     height: 300px;
 }
 
+.container-hidden {
+  display: none;
+  visibility: hidden;
+}
+
 /* resize images */
 .background {
     position: absolute;
     width: 1000px;
+}
+
+.noClick {
+   pointer-events: none;
 }
