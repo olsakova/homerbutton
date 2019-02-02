@@ -1,50 +1,63 @@
 
 
+var beerStream = document.querySelector('.pour');
 var beerGlass = document.querySelector('.beerGlass');
-var beerLiquid = document.querySelector('#liquid');
+var beerLiquid = document.querySelector('.liquid');
 var clickCount = 0;
 
 beerLiquid.onclick = function() {
-	 $('#liquid') // I Said Fill 'Er Up!
+	 $('.liquid') // I Said Fill 'Er Up!
     .animate({
       height: '0px'
     }, 2500);
 }
 
 beerGlass.onclick = function() {
-  beerGlass.classList.remove('beerGlass-active');
-  beerLiquid.classList.remove('beerGlass-active');
+
+
 
   clickCount = clickCount + 1;
 
   if (clickCount == 3) {
-  	$(document).ready(function() {
-  $('.pour') //Pour Me Another Drink, Bartender!
-    .delay(2000)
-    .animate({
-      height: '148px'
-      }, 1500)
-    .delay(1600)
-    .slideUp(500);
 
-  $('#liquid') // I Said Fill 'Er Up!
-    .delay(3400)
-    .animate({
-      height: '100px'
-    }, 2500);
+    beerGlass.classList.remove('beerGlass-active');
+    beerLiquid.classList.remove('beerGlass-active');
+    beerLiquid.classList.remove('liquid');
+    beerStream.classList.remove('pour');
 
 
-  $('.beer-foam') // Keep that Foam Rollin' Toward the Top! Yahooo!
-    .delay(3400)
-    .animate({
-      bottom: '100px'
-      }, 2500);
-  });
+    void beerGlass.offsetWidth;
+    void beerLiquid.offsetWidth;
+    void beerStream.offsetWidth;
 
+
+    beerStream.classList.add('pour');
     beerGlass.classList.add('beerGlass-active');
-
     beerLiquid.classList.add('beerGlass-active');
+    beerLiquid.classList.add('liquid');
+
     clickCount = 0;
+
+    $('.pour') //Pour Me Another Drink, Bartender!
+      .delay(2000)
+      .animate({
+        height: '148px'
+        }, 1500)
+      .delay(1600)
+      .slideUp(500);
+
+    $('.liquid') // I Said Fill 'Er Up!
+      .delay(3400)
+      .animate({
+        height: '100px'
+      }, 2500);
+
+
+    $('.beer-foam') // Keep that Foam Rollin' Toward the Top! Yahooo!
+      .delay(3400)
+      .animate({
+        bottom: '100px'
+        }, 2500);
   }
 }
 

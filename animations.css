@@ -15,7 +15,7 @@ body {
 
 .beerGlass-active {
   animation-name: beerMove;
-  animation-duration: 5s;
+  animation-duration: 8s;
   animation-timing-function: ease-in-out;
 
 }
@@ -38,9 +38,22 @@ body {
   width: 10px;
   height: 0px;
   background-color: #edaf32;
-  border-radius: 10px
+  border-radius: 10px;
 }
-#liquid {
+
+
+.pour-active {
+  animation-name: pourMove;
+  animation-duration: 8s;
+  animation-timing-function: ease-in-out;
+  .animate({
+    height: '148px'
+    }, 1500)
+  .delay(1600)
+  .slideUp(500);
+}
+
+.liquid {
     position: absolute;
     background-color: #edaf32;
     border: 2px solid #edaf32;
@@ -53,7 +66,7 @@ body {
 }
 
 
-#liquid:after {
+.liquid:after {
   background-color: rgba(255, 255, 255, 0.25);
   bottom: -10px;
   content: '';
@@ -65,7 +78,7 @@ body {
   width: 110px;
 }
 
-#liquid .bubble {
+.liquid .bubble {
   -webkit-animation-name: bubble;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
@@ -137,8 +150,8 @@ body {
 }
 @keyframes beerMove { 
     0%   { transform: translateX(0); }
-    40% { transform: translateX(420px); }
-    60% { transform: translateX(420px); }
+    30% { transform: translateX(420px); }
+    70% { transform: translateX(420px); }
     100% { transform: translateX(0); }
 }
 
@@ -154,4 +167,3 @@ body {
     position: absolute;
     width: 1000px;
 }
-
