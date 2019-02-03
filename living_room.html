@@ -13,7 +13,7 @@
   <img class="foreground" src="./graphics/Homer_Sofa.png">
 
   <img class="donutBox" onclick="removeDonut(), play(eating)" id="donutB" src="graphics/6box.svg">
-  <img class="donutHand" src="./graphics/Hand1.svg">
+  <img class="donutHand" id="donutHand" src="./graphics/Hand5.svg">
 
 
 </div>
@@ -26,22 +26,6 @@
     audio.play();
   }
   </script>
-
-
-<script type="text/javascript">
-  donutBoxArray = new Array('graphics/6box.svg', 'graphics/5box.svg', 'graphics/4box.svg', 'graphics/3box.svg', 'graphics/2box.svg', 'graphics/1box.svg', 'graphics/0box.svg');
-
-  i = 0;
-  function removeDonut()
-  {
-    i++;
-    document.getElementById("donutB").src=donutBoxArray[i];
-    if(i==donutBoxArray.length-1) {
-      i = -1;
-    }
-}
-
-</script>
 
 <script  src="living_room.js"></script>
 
