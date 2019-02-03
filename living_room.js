@@ -1,4 +1,5 @@
 
+var toggleButton = document.querySelector('#button');
 var donutHand = document.querySelector('.donutHand');
 var clickCount = 0;
 
@@ -34,3 +35,6 @@ function sleep(miliseconds) {
    }
 }
 
+toggleButton.onclick = function() {
+  window.location.href = './index.html';
+}

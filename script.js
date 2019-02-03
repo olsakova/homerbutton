@@ -7,9 +7,12 @@ var toggleButton = document.querySelector('#button');
 
 var scene1 = document.querySelector('.scene1');
 var scene2 = document.querySelector('.scene2');
+
+
 toggleButton.onclick = function() {
-  scene1.classList.toggle('hidden');
-  scene2.classList.toggle('hidden');
+  window.location.href = './living_room.html';
+  // scene1.classList.toggle('hidden');
+  // scene2.classList.toggle('hidden');
 }
 
 beerLiquid.onclick = function() {
@@ -27,15 +30,25 @@ beerLiquid.onclick = function() {
 	    beerLiquid.classList.remove('drinking');
 	    beerGlass.classList.remove('full');
     }
+    
+    if (clickCount >= 3) {
+      clickCount = 0;
+      window.setTimeout(function() {
+        location.href = './living_room.html';
+      }, 3000);
+    }
 }
 
 beerGlass.onclick = function() {
   beerGlass.classList.remove('beerGlass-active');
   beerLiquid.classList.remove('beerGlass-active');
 
+  void beerGlass.offsetWidth;
+  void beerLiquid.offsetWidth;
+
   clickCount = clickCount + 1;
 
-  if (clickCount == 3 && !beerGlass.classList.contains('drinking') && !beerGlass.classList.contains('beerGlass-active')) {
+  if (!beerGlass.classList.contains('drinking') && !beerGlass.classList.contains('beerGlass-active')) {
   	beerGlass.classList.add('beerGlass-active');
     beerLiquid.classList.add('beerGlass-active');
     beerGlass.classList.add('noClick');
@@ -59,7 +72,7 @@ beerGlass.onclick = function() {
       height: '100px'
     }, 2000);
   });
-    clickCount = 0;
+
     beerGlass.classList.add('full');
   }
 }
