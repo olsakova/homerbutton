@@ -38,7 +38,6 @@ body {
 }
 
 .handLeave-active {
-  /*animation: forwards;*/
   animation-name: handLeave;
   animation-duration: 2s;
   animation-timing-function: ease-in-out;
@@ -49,32 +48,11 @@ body {
     to   { transform: transform: translateX(-75px) translateY(250px);}
 }
 
-/*@keyframes beerMove { 
-    0%   { transform: translateX(0); }
-    30% { transform: translateX(420px); }
-    80% { transform: translateX(420px); }
-    100% { transform: translateX(0); }
-}*/
-
 
 @keyframes handLeave { 
-/*    from { transform: translateY(0); }
-    to { transform: translateX(-75px) translateY(250px)}*/
         0%   { transform: translateX(0); }
         50% { transform: translateX(-75px) translateY(250px); }
         100% { transform: translateX(0);}
-}
-
-.handReturn-active {
-  animation: forwards;
-  animation-name: handReturn;
-  animation-duration: 0.8s;
-  animation-timing-function: ease-in;
-}
-
-@keyframes handReturn { 
-    from { transform: translateY(0); }
-    to { transform: translateX(-75px) translateY(100px)}
 }
 
 .container {
