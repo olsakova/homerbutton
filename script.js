@@ -32,7 +32,7 @@ beerLiquid.onclick = function() {
 	    beerLiquid.classList.remove('drinking');
 	    beerGlass.classList.remove('full');
     }
-    
+
     if (clickCount >= 3) {
       clickCount = 0;
       window.setTimeout(function() {
@@ -65,7 +65,7 @@ beerGlass.onclick = function() {
     .animate({
       height: '145px'
       }, 1500)
-    .delay(1400)
+    .delay(800)
     .slideUp(5);
 
   $('#liquid') // I Said Fill 'Er Up!
