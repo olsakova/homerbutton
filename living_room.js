@@ -1,4 +1,5 @@
 
+var toggleButton = document.querySelector('#button');
 var donutHand = document.querySelector('.donutHand');
 var clickCount = 0;
 
@@ -17,3 +18,6 @@ function play(element){
   audio.play();
 }
 
+toggleButton.onclick = function() {
+  window.location.href = './index.html';
+}

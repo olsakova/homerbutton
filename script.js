@@ -7,9 +7,12 @@ var toggleButton = document.querySelector('#button');
 
 var scene1 = document.querySelector('.scene1');
 var scene2 = document.querySelector('.scene2');
+
+
 toggleButton.onclick = function() {
-  scene1.classList.toggle('hidden');
-  scene2.classList.toggle('hidden');
+  window.location.href = './living_room.html';
+  // scene1.classList.toggle('hidden');
+  // scene2.classList.toggle('hidden');
 }
 
 beerLiquid.onclick = function() {
