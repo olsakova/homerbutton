@@ -3,17 +3,34 @@ var donutHand = document.querySelector('.donutHand');
 var clickCount = 0;
 
 
-donutHand.onclick = function() {
-  clickCount = clickCount + 1;
-
-  if (clickCount == 1) {
-    donutHand.classList.add('handLeave-active');
-    window.setTimeout(animationFinished, 5100);
-  }
+window.onload = function() {
+  donutHand.classList.add('handEnter-active');
 }
 
-function play(element){
-  var audio = document.getElementById(element);
-  audio.play();
+donutHand.onclick = function() {
+  donutHand.classList.remove('handLeave-active');
+
+  donutHand.classList.remove('handEnter-active');
+
+  donutHand.classList.add('handLeave-active');
+
+  donutHand.classList.add('noClick');
+
+
+  play('eating');
+  donutHand.classList.add('handEnter-active');
+  window.setTimeout(animationFinished, 0);
+
+}
+
+function animationFinished() {
+  beerGlass.classList.remove('noClick');
+}
+
+function sleep(miliseconds) {
+   var currentTime = new Date().getTime();
+
+   while (currentTime + miliseconds >= new Date().getTime()) {
+   }
 }
 
