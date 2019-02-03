@@ -12,6 +12,14 @@ body {
 }
 
 /* resize images */
+.tv {
+    position: absolute;
+    width: 235px;
+    height: 160px;
+    left: 385px;
+    top: 205px
+
+}
 .background {
     position: absolute;
     width: 1000px;
