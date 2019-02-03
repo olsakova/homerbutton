@@ -3,19 +3,19 @@ var toggleButton = document.querySelector('#button');
 var donutHand = document.querySelector('.donutHand');
 var donutBox = document.querySelector('.donutBox');
 var clickCount = 0;
-var donutCount = 6;
+var donutCount = 3;
 var iHaveDonut = false;
 
 donutArray= new Array('graphics/Hand1.svg', 'graphics/Hand2.svg', 'graphics/Hand3.svg', 'graphics/Hand4.svg', 'graphics/Hand5.svg');
 
-donutBoxArray = new Array('graphics/0box.svg', 'graphics/1box.svg', 'graphics/2box.svg', 'graphics/3box.svg', 'graphics/4box.svg', 'graphics/5box.svg', 'graphics/6box.svg');
+donutBoxArray = new Array('graphics/0box.svg', 'graphics/1box.svg', 'graphics/2box.svg', 'graphics/3box.svg');
 
 donutBox.onclick = function() {
 	if (clickCount == 0 && iHaveDonut == false){
 		donutCount--;
 		// document.getElementById("donutHand").src=donutArray[clickCount];	
-		if (donutCount <= 0) {
-			donutCount = 6;
+		if (donutCount < 0 && !iHaveDonut) {
+        	location.href = './index.html';
 		}
 		document.getElementById("donutB").src=donutBoxArray[donutCount];
 
@@ -28,12 +28,15 @@ donutBox.onclick = function() {
 }
 
 donutHand.onclick = function() {
-	if (donutCount != 6 && iHaveDonut){
+	if (donutCount != 3 && iHaveDonut){
 		clickCount = clickCount + 1;
 	  	donutHand.classList.add('handLeave-active');
 	 	window.setTimeout(updateDonut, 1000);
 	 	play('eating');
- 	}
+ 	} 
+ 	else if (donutCount < 0 && !iHaveDonut) {
+        window.location.href = './index.html';
+	}
 }
 
 function updateDonut(){
@@ -47,6 +50,9 @@ function updateDonut(){
 
 function animationDone(){
 	donutHand.classList.remove('handLeave-active');
+	if (donutCount < 0 && !iHaveDonut) {
+        window.location.href = './index.html';
+	}
 }
 
 function play(element){
