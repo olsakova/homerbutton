@@ -14,7 +14,7 @@ donutBox.onclick = function() {
 	if (clickCount == 0 && iHaveDonut == false){
 		donutCount--;
 		if (donutCount < 0 && !iHaveDonut) {
-        	location.href = './index.html';
+        	window.location.href = './index.html';
 		}
 		document.getElementById("donutB").src=donutBoxArray[donutCount];
 
@@ -29,6 +29,7 @@ donutHand.onclick = function() {
 	if (donutCount != 3 && iHaveDonut){
 		clickCount = clickCount + 1;
 	  	donutHand.classList.add('handLeave-active');
+	  	donutHand.classList.add('noClick');
 	 	window.setTimeout(updateDonut, 1000);
 	 	play('eating');
  	} 
@@ -53,12 +54,16 @@ function updateDonut(){
 	if (clickCount == donutArray.length - 1){
   		clickCount = 0;
   		iHaveDonut = false;
+  		if (donutCount < 0) {
+        	window.location.href = './index.html';
+		}
   	}
   	window.setTimeout(animationDone, 1000);
 }
 
 function animationDone(){
 	donutHand.classList.remove('handLeave-active');
+	donutHand.classList.remove('noClick');
 	if (donutCount < 0 && !iHaveDonut) {
         window.location.href = './index.html';
 	}
