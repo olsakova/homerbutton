@@ -26,6 +26,8 @@ beerLiquid.onclick = function() {
 	      height: '0px'
 	    }, 2500);
 
+      play('beerburp');
+
 	    beerGlass.classList.remove('drinking');
 	    beerLiquid.classList.remove('drinking');
 	    beerGlass.classList.remove('full');
@@ -53,7 +55,7 @@ beerGlass.onclick = function() {
     beerLiquid.classList.add('beerGlass-active');
     beerGlass.classList.add('noClick');
     window.setTimeout(animationFinished, 5100);
-
+    play('slidepourslide');
 
   	$(document).ready(function() {
   $('.pour') //Pour Me Another Drink, Bartender!
@@ -79,4 +81,9 @@ beerGlass.onclick = function() {
 
 function animationFinished() {
         beerGlass.classList.remove('noClick');
+}
+
+function play(element){
+  var audio = document.getElementById(element);
+  audio.play();
 }

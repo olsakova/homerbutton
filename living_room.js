@@ -23,6 +23,7 @@ donutBox.onclick = function() {
 		// clickCount = clickCount + 1;
 	  	donutHand.classList.add('handLeave-active');
 	 	window.setTimeout(updateDonut, 1000);
+	 	play('woohoo');
 	}
 }
 
@@ -31,6 +32,7 @@ donutHand.onclick = function() {
 		clickCount = clickCount + 1;
 	  	donutHand.classList.add('handLeave-active');
 	 	window.setTimeout(updateDonut, 1000);
+	 	play('eating');
  	}
 }
 
