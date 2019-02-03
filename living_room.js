@@ -13,14 +13,12 @@ donutBoxArray = new Array('graphics/0box.svg', 'graphics/1box.svg', 'graphics/2b
 donutBox.onclick = function() {
 	if (clickCount == 0 && iHaveDonut == false){
 		donutCount--;
-		// document.getElementById("donutHand").src=donutArray[clickCount];	
 		if (donutCount < 0 && !iHaveDonut) {
         	location.href = './index.html';
 		}
 		document.getElementById("donutB").src=donutBoxArray[donutCount];
 
 		iHaveDonut = true;
-		// clickCount = clickCount + 1;
 	  	donutHand.classList.add('handLeave-active');
 	 	window.setTimeout(updateDonut, 1000);
 	 	play('woohoo');
@@ -34,6 +32,17 @@ donutHand.onclick = function() {
 	 	window.setTimeout(updateDonut, 1000);
 	 	play('eating');
  	} 
+ 	else if (!iHaveDonut) {
+ 		donutCount--;
+		if (donutCount < 0) {
+        	location.href = './index.html';
+		}
+		document.getElementById("donutB").src=donutBoxArray[donutCount];
+		iHaveDonut = true;
+	  	donutHand.classList.add('handLeave-active');
+	 	window.setTimeout(updateDonut, 1000);
+	 	play('woohoo');
+ 	}
  	else if (donutCount < 0 && !iHaveDonut) {
         window.location.href = './index.html';
 	}
