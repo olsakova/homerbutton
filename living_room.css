@@ -33,34 +33,26 @@ body {
   position: absolute;
   width: 100px;
   height: auto;
-  top: 590px;
-  left: 510px;
+  top: 320px;
+  left: 675px;
 }
-
-.handEnter-active {
-  animation-fill-mode: forwards;
-  animation-delay: 1s;
-  animation-name: handEnter;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-}
-
-@keyframes handEnter { 
-    from { transform: translateY(590px); }
-    to { transform: translateY(-270px) translateX(140px);}
-}
-
 
 .handLeave-active {
-  animation-fill-mode: backwards;
   animation-name: handLeave;
-  animation-duration: 1s;
-  animation-timing-function: ease-in;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
 }
 
 @keyframes handLeave { 
-    from { transform: translateY(-270px); }
-    to { transform: translateX(-75px) translateY(250px)}
+    from { transform: translateX(0); }
+    to   { transform: transform: translateX(-75px) translateY(250px);}
+}
+
+
+@keyframes handLeave { 
+        0%   { transform: translateX(0); }
+        50% { transform: translateX(-75px) translateY(250px); }
+        100% { transform: translateX(0);}
 }
 
 
