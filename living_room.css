@@ -3,6 +3,10 @@ body {
   /* overflow: hidden; */
 }
 
+iframe {
+  display: none;
+}
+
 .noClick {
   pointer-events: none;
 }

@@ -2,7 +2,9 @@ body {
   margin: 0;
   /* overflow: hidden; */
 }
-
+iframe {
+  display: none;
+}
 .noClick {
   pointer-events: none;
 }
