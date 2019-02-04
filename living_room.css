@@ -75,7 +75,10 @@ iframe {
     overflow: hidden;
 }
 
-#button {
+#goToMosButton {
   position: absolute;
-  top: 600px;
+  width: 80px;
+  height: auto;
+  top: 10px;
+  left: 910px;
 }

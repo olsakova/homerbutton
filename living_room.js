@@ -1,5 +1,5 @@
 
-var toggleButton = document.querySelector('#button');
+var toggleButton = document.querySelector('#goToMosButton');
 var donutHand = document.querySelector('.donutHand');
 var donutBox = document.querySelector('.donutBox');
 var clickCount = 0;
@@ -32,7 +32,7 @@ donutHand.onclick = function() {
 	  	donutHand.classList.add('noClick');
 	 	window.setTimeout(updateDonut, 1000);
 	 	play('eating');
- 	} 
+ 	}
  	else if (!iHaveDonut) {
  		donutCount--;
 		if (donutCount < 0) {

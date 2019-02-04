@@ -3,7 +3,7 @@
 var beerGlass = document.querySelector('.beerGlass');
 var beerLiquid = document.querySelector('#liquid');
 var clickCount = 0;
-var toggleButton = document.querySelector('#button');
+var toggleButton = document.querySelector('#goHomeButton');
 
 var scene1 = document.querySelector('.scene1');
 var scene2 = document.querySelector('.scene2');
